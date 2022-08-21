@@ -64,48 +64,21 @@ font-family: 'Nunito Sans', sans-serif;
 font-family: 'Play', sans-serif;
 font-family: 'Roboto', sans-serif;
 */
-.message {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 200px;
-  font-size: 14px; }
-
 body {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-
-.container {
-  width: 600px; }
+  overflow: hidden; }
 
 .wrapper {
-  position: absolute;
-  z-index: -1;
-  height: 90vh;
-  width: 90vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  @media (orientation: portrait) {
+  width: 90vw;
+  height: 90vw;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 10px; }
+  @media (orientation: landscape) {
     .wrapper {
-      height: 90vw;
-      width: 90vw; } }
+      width: 90vh;
+      height: 90vh; } }
 
 .wrapper-1, .wrapper-2, .wrapper-3, .wrapper-4, .wrapper-5, .wrapper-6 {
   display: -webkit-box;
@@ -117,61 +90,51 @@ body {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  border: 2px dashed #CEC6EC;
+  border: 1px dashed #CEC6EC;
   border-radius: 50%; }
 
 .wrapper-1 {
-  position: absolute;
-  height: 90vh;
-  width: 90vh;
-  opacity: 0.5; }
-  @media (orientation: portrait) {
-    .wrapper-1 {
-      height: 90vw;
-      width: 90vw; } }
+  width: 100%;
+  height: 100%;
+  opacity: 0.6; }
 
 .wrapper-2 {
-  width: 80vh;
-  height: 80vh; }
-  @media (orientation: portrait) {
-    .wrapper-2 {
-      height: 80vw;
-      width: 80vw; } }
+  width: 90%;
+  height: 90%; }
 
 .wrapper-3 {
-  width: 70vh;
-  height: 70vh; }
-  @media (orientation: portrait) {
-    .wrapper-3 {
-      height: 70vw;
-      width: 70vw; } }
+  width: 87%;
+  height: 87%; }
 
 .wrapper-4 {
-  width: 60vh;
-  height: 60vh; }
-  @media (orientation: portrait) {
-    .wrapper-4 {
-      height: 60vw;
-      width: 60vw; } }
+  width: 85%;
+  height: 85%; }
 
 .wrapper-5 {
-  width: 50vh;
-  height: 50vh; }
-  @media (orientation: portrait) {
-    .wrapper-5 {
-      height: 50vw;
-      width: 50vw; } }
+  width: 83%;
+  height: 83%; }
 
 .wrapper-6 {
-  width: 40vh;
-  height: 40vh; }
-  @media (orientation: portrait) {
-    .wrapper-6 {
-      height: 40vw;
-      width: 40vw; } }
+  width: 80%;
+  height: 80%; }
+
+.container {
+  overflow: auto;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  max-width: 640px;
+  width: 100%;
+  height: 100%;
+  padding: 8vh 20px; }
 
 .main__block {
-  margin: 0 20px;
+  width: 100%;
+  min-width: 200px;
   border: 2px solid #d7dbdf;
   border-radius: 12px; }
 
@@ -259,6 +222,53 @@ body {
         width: 30px; } }
 
 .main__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   height: 167px;
   background-color: #f7f5fd;
   border-radius: 0 0 10px 10px; }
+
+.camera_rectangle {
+  width: 52px;
+  height: 42px;
+  background-color: #0d0d53;
+  background-image: -webkit-linear-gradient(315deg, #36258a 20%, #0d0d53, #0d0d53);
+  background-image: -o-linear-gradient(315deg, #36258a 20%, #0d0d53, #0d0d53);
+  background-image: linear-gradient(135deg, #36258a 20%, #0d0d53, #0d0d53);
+  border-radius: 8px; }
+
+.camera_triangle {
+  position: relative;
+  width: 10px;
+  height: 36px;
+  background-color: #0d0d53;
+  border-radius: 5px;
+  top: -39px;
+  left: 60px; }
+  .camera_triangle::before {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 12px;
+    background-color: #0d0d53;
+    border-radius: 20px;
+    -webkit-transform: translate(-15px, 6px) rotate(-45deg);
+    -ms-transform: translate(-15px, 6px) rotate(-45deg);
+    transform: translate(-15px, 6px) rotate(-45deg); }
+  .camera_triangle::after {
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 12px;
+    background-color: #0d0d53;
+    border-radius: 20px;
+    -webkit-transform: translate(-15px, 17px) rotate(45deg);
+    -ms-transform: translate(-15px, 17px) rotate(45deg);
+    transform: translate(-15px, 17px) rotate(45deg); }
